@@ -9,6 +9,13 @@ import static org.assertj.core.api.Assertions.*;
 
 public class BallsTest {
     @Test
+    void strike() {
+        Balls answers = new Balls(Arrays.asList(1,2,3));
+        BallType type = answers.compare(new Ball(1,1));
+        assertThat(type).isEqualTo(BallType.STRIKE);
+    }
+
+    @Test
     void ball() {
         Balls answers = new Balls(Arrays.asList(1,2,3));
         BallType type = answers.compare(new Ball(1,2));
