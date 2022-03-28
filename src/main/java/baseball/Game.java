@@ -13,11 +13,11 @@ public class Game {
     }
 
     private void countStrikeOrBall(BallType ballType) {
-        if(ballType.equals(BallType.STRIKE)){
+        if(ballType.isStrike()){
             strike++;
         }
 
-        if(ballType.equals(BallType.BALL)){
+        if(ballType.isBall()){
             ball++;
         }
     }

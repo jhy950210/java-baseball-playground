@@ -32,7 +32,7 @@ public class Balls {
 
         return balls.stream()
                 .map(answers -> answers.compare(ball))
-                .filter(ballType -> ballType != BallType.NOTHING)
+                .filter(ballType -> !ballType.isNothing())
                 .findFirst()
                 .orElse(BallType.NOTHING);
 

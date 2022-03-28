@@ -46,9 +46,13 @@ public class Main {
             // 개행문자 제거하기 위해 추가
             scan.nextLine();
 
-            if(isContinueGame == 1){
-                balls = new Balls(RandomNumber.createAnswers());
-            }
+            createNewAnswer();
+        }
+    }
+
+    private static void createNewAnswer() {
+        if(isContinueGame == 1){
+            balls = new Balls(RandomNumber.createAnswers());
         }
     }
 }
